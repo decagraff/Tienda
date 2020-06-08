@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30128.74
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tienda", "Tienda\Tienda.csproj", "{1E6860EA-8F19-4F18-886D-25D14535F576}"
+	ProjectSection(ProjectDependencies) = postProject
+		{07848443-5455-42C8-88CE-B4024301F636} = {07848443-5455-42C8-88CE-B4024301F636}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WFCTienda", "WFCTienda\WFCTienda.csproj", "{07848443-5455-42C8-88CE-B4024301F636}"
 EndProject

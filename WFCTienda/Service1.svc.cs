@@ -19,7 +19,7 @@ namespace WFCTienda
         public string Agregar(Producto reg, HttpPostedFileBase archivo)
         {
             string mensaje = "";
-            using (SqlConnection cn = new SqlConnection("server=.;database=Negocios2019;uid=sa;pwd=sql"))
+            using (SqlConnection cn = new SqlConnection("server=.;database=Tienda;uid=sa;pwd=sql"))
             {
                 try
                 {
@@ -78,7 +78,7 @@ namespace WFCTienda
         public string Editar(Producto reg, HttpPostedFileBase archivo)
         {
             string mensaje = "";
-            using (SqlConnection cn = new SqlConnection("server=.;database=Negocios2019;uid=sa;pwd=sql"))
+            using (SqlConnection cn = new SqlConnection("server=.;database=Tienda;uid=sa;pwd=sql"))
             {
                 try
                 {
@@ -106,7 +106,7 @@ namespace WFCTienda
         public string Eliminar(string idprod)
         {
             string mensaje = "";
-            using (SqlConnection cn = new SqlConnection("server=.;database=Negocios2019;uid=sa;pwd=sql"))
+            using (SqlConnection cn = new SqlConnection("server=.;database=Tienda;uid=sa;pwd=sql"))
             {
                 try
                 {
@@ -141,9 +141,8 @@ namespace WFCTienda
                         Codigo_MP = dr.GetString(2),
                         Descripcion_P = dr.GetString(3),
                         Precio_P = dr.GetDecimal(4),
-                        Stock_P = dr.GetDecimal(5),
-                        Imagen_P=dr.GetString(6),
-                        Estado_P=dr.GetString(7),                       
+                        Imagen_P=dr.GetString(5),
+                        Estado_P=dr.GetString(6),                       
 
                     };
                     temporal.Add(reg);

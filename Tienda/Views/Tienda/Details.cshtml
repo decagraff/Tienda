@@ -1,0 +1,82 @@
+﻿@model Tienda.ServiceReference1.Producto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo_CP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo_CP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo_MP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo_MP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Codigo_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Imagen_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Imagen_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Precio_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Precio_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stock_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stock_P)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

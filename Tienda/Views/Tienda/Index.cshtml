@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Tienda.ServiceReference1.Producto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo_CP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo_MP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Imagen_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Precio_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Stock_P)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo_CP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo_MP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Imagen_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stock_P)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Codigo_P }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Codigo_P }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Codigo_P })
+        </td>
+    </tr>
+}
+
+</table>
+<div>
+    @ViewBag.mensaje
+</div>
