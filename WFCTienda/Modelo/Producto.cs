@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WFCTienda.Modelo
 {
-    [DataContract]public class Producto
+    [DataContract] public class Producto
     {
         [DataMember] public string Codigo_P { get; set; }
         [DataMember] public string Codigo_CP { get; set; }

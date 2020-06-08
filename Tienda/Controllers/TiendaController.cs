@@ -38,14 +38,22 @@ namespace Tienda.Controllers
         [HttpPost]
         public ActionResult Create(Producto reg,HttpPostedFileBase archivo)
         {
-
-            ViewBag.mensaje = servicio.Agregar(reg,archivo);
-
-
             ViewBag.clases = new SelectList(
-               servicio.clases(), "codigo_cp", "nombre_cp",reg.Codigo_CP);
+               servicio.clases(), "codigo_cp", "nombre_cp", reg.Codigo_CP);
             ViewBag.marcas = new SelectList(
-                servicio.marcas(), "codigo_mp", "nombre_mp",reg.Codigo_MP);
+                servicio.marcas(), "codigo_mp", "nombre_mp", reg.Codigo_MP);
+
+            if (!ModelState.IsValid) return View(reg);
+
+
+            if (archivo == null) return View(reg);
+
+            //guardar la foto
+            archivo.SaveAs(System.IO.Path.Combine(
+                    Server.MapPath("~/Fotos/"), System.IO.Path.GetFileName(archivo.FileName)));
+
+            ViewBag.mensaje = servicio.Agregar(reg,archivo);          
+            
 
             return View(reg);
 

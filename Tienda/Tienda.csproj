@@ -213,6 +213,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Fotos\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -23,6 +23,7 @@ namespace WFCTienda
             {
                 try
                 {
+
                     SqlCommand cmd = new SqlCommand(
                     "Insert producto Values(@codp,@codcp,@codmp,@des,@precio,@stock,@img,@estado)", cn);
                     cmd.Parameters.AddWithValue("@codp", reg.Codigo_P);
@@ -31,11 +32,12 @@ namespace WFCTienda
                     cmd.Parameters.AddWithValue("@des", reg.Descripcion_P);
                     cmd.Parameters.AddWithValue("@precio", reg.Precio_P);
                     cmd.Parameters.AddWithValue("@stock", reg.Stock_P);
-                    cmd.Parameters.AddWithValue("@img", "/Fotos/ " + System.IO.Path.GetFileName(archivo.FileName));
+                    cmd.Parameters.AddWithValue("@img", "~/Fotos/" + System.IO.Path.GetFileName(archivo.FileName));
                     cmd.Parameters.AddWithValue("@estado", reg.Estado_P);
                     cn.Open();
                     cmd.ExecuteNonQuery();//ejecutar
-                    mensaje = "Cliente Agregado";
+                                          
+                    mensaje = "Producto Agregado";
                 }
                 catch (SqlException ex) { mensaje = ex.Message; }
                 finally { cn.Close(); }
