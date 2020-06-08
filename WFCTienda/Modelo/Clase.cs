@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Web;
 
 namespace WFCTienda.Modelo
 {
-    public class Clase
+    [DataContract]public class Clase
     {
-        private string codigo_cp { get; set; }
-        private string nombre_cp { get; set; }
-        private string estado_cp { get; set; }
+        [DataMember] public string codigo_cp { get; set; }
+        [DataMember] public string nombre_cp { get; set; }
+        [DataMember] public string estado_cp { get; set; }
     }
 }
