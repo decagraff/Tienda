@@ -65,6 +65,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modelo\Clase.cs" />
+    <Compile Include="Modelo\Detalle_Venta.cs" />
+    <Compile Include="Modelo\Marca.cs" />
+    <Compile Include="Modelo\Producto.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Modelo\Venta.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
