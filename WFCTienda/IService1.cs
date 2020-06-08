@@ -12,7 +12,7 @@ namespace WFCTienda
     [ServiceContract]
     public interface IService1
     {        
-        //sadasdasdasd
+        //Huh
 
     }
 }
