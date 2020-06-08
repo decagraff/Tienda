@@ -13,6 +13,5 @@ namespace WFCTienda
     public interface IService1
     {        
 
-        
     }
 }
